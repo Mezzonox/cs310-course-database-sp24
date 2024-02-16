@@ -112,7 +112,7 @@ public class RegistrationDAO {
             
             if (conn.isValid(0)) {
                 
-               // Prepare statement with Withdraw query; Pass arguments into each statement
+                // Prepare statement with Withdraw query; Pass arguments into each statement
                 ps = conn.prepareStatement(QUERY_WITHDRAW);
                 ps.setInt(1, studentid);
                 ps.setInt(2, termid);

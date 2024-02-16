@@ -29,7 +29,7 @@ public class SectionDAO {
             
             if (conn.isValid(0)) {
                 
-                // Prepare statement with List query; Pass arguments into each statement
+                // Prepare statement with Find query; Pass arguments into each statement
                 ps = conn.prepareStatement(QUERY_FIND);
                 ps.setInt(1, termid);
                 ps.setString(2, subjectid);
