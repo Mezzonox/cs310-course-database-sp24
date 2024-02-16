@@ -24,7 +24,7 @@ public class Main {
         if ( !daoFactory.isClosed() ) {
             
             System.out.println("Connected Successfully!");
-            
+           
         }
         
     }

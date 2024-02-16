@@ -29,8 +29,17 @@ public class SectionDAO {
             
             if (conn.isValid(0)) {
                 
-                // INSERT YOUR CODE HERE
+                // Prepare statement with List query; Pass arguments into each statement
+                ps = conn.prepareStatement(QUERY_FIND);
+                ps.setInt(1, termid);
+                ps.setString(2, subjectid);
+                ps.setString(3, num);
                 
+                // Execute query; Get ResultSet
+                rs = ps.executeQuery();
+                
+                // Convert the result to a JSON array
+                result = DAOUtility.getResultSetAsJson(rs);   
             }
             
         }
